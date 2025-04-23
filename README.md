@@ -1,6 +1,66 @@
-# Smart Todo List Backend
+# Smart Todo Backend
 
-A Node.js backend for a Smart Todo List application with automatic task status updates based on deadlines.
+Backend for Smart Todo List application
+
+## Deployment on Render
+
+This project is configured for deployment on Render.com.
+
+### Setup Steps:
+
+1. Create a new Web Service on Render
+2. Connect your GitHub repository
+3. Use the following settings:
+   - **Name**: smart-todo-backend (or your preferred name)
+   - **Environment**: Node
+   - **Build Command**: npm install
+   - **Start Command**: npm start
+   - **Plan**: Free or your preferred plan
+
+### Environment Variables:
+
+Set the following environment variables in Render dashboard:
+
+```
+NODE_ENV=production
+PORT=10000
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_HOST=your_database_host
+DB_PORT=5432
+```
+
+### Database Setup:
+
+For a PostgreSQL database, you can:
+1. Create a Render PostgreSQL service
+2. Connect it to your web service
+3. Render will automatically set the DATABASE_URL environment variable
+
+Alternatively, use any PostgreSQL provider and update the environment variables accordingly.
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run in development mode
+npm run dev
+
+# Run in production mode
+npm start
+```
+
+## API Endpoints
+
+- `GET /`: Health check endpoint
+- `GET /api/tasks`: Get all tasks
+- `POST /api/tasks`: Create a new task
+- `GET /api/tasks/:id`: Get a task by ID
+- `PUT /api/tasks/:id`: Update a task
+- `DELETE /api/tasks/:id`: Delete a task
 
 ## Features
 
