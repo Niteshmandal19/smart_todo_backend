@@ -12,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   'http://localhost:5176',
+  'https://smart-todo-frontend-eo89sttqm-nitesh-mandals-projects.vercel.app/'
 ];
 
 // Middleware
